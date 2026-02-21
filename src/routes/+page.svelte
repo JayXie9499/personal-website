@@ -375,11 +375,12 @@
 									href={social.url}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="flex items-center gap-2 border border-transparent bg-bg-tertiary px-6 py-4 transition-all duration-(--transition-base) hover:border-accent-primary hover:bg-bg-primary"
+									class="flex items-center gap-2 border border-transparent bg-bg-tertiary px-3 py-4 transition-all duration-(--transition-base) hover:border-accent-primary hover:bg-bg-primary md:px-6"
 									data-testid={`social-${social.name.toLowerCase()}`}
 								>
 									<img src={iconMap[social.icon]} alt={social.name} class="h-6 w-6" />
-									<span class="font-medium text-text-secondary">{social.name}</span>
+									<span class="hidden font-medium text-text-secondary md:inline">{social.name}</span
+									>
 								</a>
 							{/each}
 						</div>
@@ -465,23 +466,43 @@
 			<div class="grid grid-cols-1 gap-12 md:grid-cols-2">
 				{#each skillCategories as category (category.category)}
 					<div
-						class="border border-border bg-bg-secondary p-8 transition-all duration-(--transition-base) hover:border-accent-primary"
+						class="border border-border bg-bg-secondary transition-all duration-(--transition-base) hover:border-accent-primary"
 						data-testid={`tech-category-${category.category.toLowerCase()}`}
 					>
-						<h3 class="mb-6 text-xl text-accent-primary">{category.category}</h3>
-						<div class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-6">
-							{#each category.skills as skill (skill.name)}
-								<div
-									class="flex flex-col items-center gap-2 border border-transparent bg-bg-tertiary p-6 transition-all duration-(--transition-base) hover:border-accent-primary"
-									data-testid={`tech-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
-								>
-									<img src={iconMap[skill.icon]} alt={skill.name} class="h-8 w-8" />
-									<span class="text-center text-sm font-medium text-text-secondary"
-										>{skill.name}</span
-									>
+						<button
+							class="flex w-full items-center justify-between p-8 text-left"
+							onclick={() => toggleCategory(category.category)}
+							aria-expanded={expandedCategories.has(category.category)}
+							data-testid={`tech-category-toggle-${category.category.toLowerCase()}`}
+						>
+							<h3 class="text-xl text-accent-primary">{category.category}</h3>
+							<span
+								class="text-text-secondary transition-transform duration-(--transition-base) {expandedCategories.has(
+									category.category
+								)
+									? 'rotate-180'
+									: ''}"
+							>
+								▾
+							</span>
+						</button>
+						{#if expandedCategories.has(category.category)}
+							<div class="px-8 pb-8">
+								<div class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-6">
+									{#each category.skills as skill (skill.name)}
+										<div
+											class="flex flex-col items-center gap-2 border border-transparent bg-bg-tertiary p-6 transition-all duration-(--transition-base) hover:border-accent-primary"
+											data-testid={`tech-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
+										>
+											<img src={iconMap[skill.icon]} alt={skill.name} class="h-8 w-8" />
+											<span class="text-center text-sm font-medium text-text-secondary"
+												>{skill.name}</span
+											>
+										</div>
+									{/each}
 								</div>
-							{/each}
-						</div>
+							</div>
+						{/if}
 					</div>
 				{/each}
 			</div>
