@@ -13,6 +13,7 @@
 		type Project
 	} from '$lib/data';
 	import { onMount } from 'svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 
 	// Skill SVGs
 	import html5Svg from '$lib/assets/html5.svg';
@@ -92,7 +93,7 @@
 	let isDeleting = $state(false);
 
 	// Skills accordion state - track which categories are expanded
-	let expandedCategories = $state<Set<string>>(new Set());
+	let expandedCategories = new SvelteSet<string>();
 
 	// Portfolio filter state
 	let activeFilter = $state<ProjectType>('all');
@@ -159,16 +160,15 @@
 		// Initialize accordion state based on viewport
 		const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 		if (isDesktop) {
-			expandedCategories = new Set(skillCategories.map((c) => c.category));
+			skillCategories.forEach((c) => expandedCategories.add(c.category));
 		}
 
 		// Listen for resize to update default state
 		const mediaQuery = window.matchMedia('(min-width: 768px)');
 		const handleMediaChange = (e: MediaQueryListEvent) => {
+			expandedCategories.clear();
 			if (e.matches) {
-				expandedCategories = new Set(skillCategories.map((c) => c.category));
-			} else {
-				expandedCategories = new Set();
+				skillCategories.forEach((c) => expandedCategories.add(c.category));
 			}
 		};
 		mediaQuery.addEventListener('change', handleMediaChange);
@@ -181,13 +181,11 @@
 
 	// Toggle skill category accordion
 	function toggleCategory(category: string) {
-		const next = new Set(expandedCategories);
-		if (next.has(category)) {
-			next.delete(category);
+		if (expandedCategories.has(category)) {
+			expandedCategories.delete(category);
 		} else {
-			next.add(category);
+			expandedCategories.add(category);
 		}
-		expandedCategories = next;
 	}
 
 	// Filter projects
