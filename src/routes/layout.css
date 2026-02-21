@@ -1,5 +1,5 @@
-@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=LXGW+WenKai+Screen&display=swap');
+@import 'tailwindcss';
 
 /* ============================================
    Design Tokens & CSS Variables
@@ -768,9 +768,10 @@ button {
 }
 
 .footer-text {
-	text-align: center;
+	text-align: left;
 	color: var(--color-text-muted);
-	font-size: 0.875rem;
+	font-family: var(--font-mono), var(--font-cjk);
+	font-size: 0.75rem;
 }
 
 /* ============================================

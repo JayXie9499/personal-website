@@ -399,7 +399,9 @@
 	<!-- Footer -->
 	<footer class="footer" data-testid="footer">
 		<div class="container">
-			<p class="footer-text">Copyright © {new Date().getFullYear()}</p>
+			<p class="footer-text">
+				Copyright © {new Date().getFullYear()} Meng Che Hsieh. All rights reserved.
+			</p>
 		</div>
 	</footer>
 </div>
