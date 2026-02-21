@@ -194,7 +194,7 @@
 				</div>
 				<div class="terminal-body">
 					<div class="terminal-line">
-						<span class="terminal-prompt">$</span>
+						<span class="terminal-prompt">[user@host]:~ $</span>
 						<span class="terminal-text" data-testid="typing-text">{typedText}</span>
 						<span class="terminal-cursor">▋</span>
 					</div>
@@ -204,18 +204,18 @@
 				<a
 					href="#about"
 					onclick={(e) => handleNavClick(e, '#about')}
-					class="btn btn-primary"
+					class="cmd-link"
 					data-testid="cta-about"
 				>
-					查看簡介
+					$ ./about --me
 				</a>
 				<a
 					href="#portfolio"
 					onclick={(e) => handleNavClick(e, '#portfolio')}
-					class="btn btn-secondary"
+					class="cmd-link"
 					data-testid="cta-portfolio"
 				>
-					檢視作品
+					$ ls ~/projects
 				</a>
 			</div>
 		</div>
