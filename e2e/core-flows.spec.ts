@@ -31,6 +31,10 @@ test.describe('Homepage Core Flows', () => {
 			await expect(socialGithub).toBeVisible();
 			await expect(socialLinkedin).toBeVisible();
 
+			// Certificates section
+			const certificates = page.getByTestId('certificates-section');
+			await expect(certificates).toBeVisible();
+
 			// Tech Stack section
 			const techStack = page.getByTestId('tech-stack-section');
 			await expect(techStack).toBeVisible();
@@ -41,7 +45,8 @@ test.describe('Homepage Core Flows', () => {
 			const portfolio = page.getByTestId('portfolio-section');
 			await expect(portfolio).toBeVisible();
 			await expect(portfolio.getByTestId('portfolio-filters')).toBeVisible();
-			await expect(portfolio.getByTestId('projects-grid')).toBeVisible();
+			// projects-grid exists but is hidden when projects array is empty
+			await expect(portfolio.getByTestId('projects-grid')).toBeAttached();
 
 			// Footer
 			const footer = page.getByTestId('footer');
@@ -53,6 +58,7 @@ test.describe('Homepage Core Flows', () => {
 
 			// Check all navigation links are present
 			await expect(nav.getByTestId('nav-link-about')).toBeVisible();
+			await expect(nav.getByTestId('nav-link-certificates')).toBeVisible();
 			await expect(nav.getByTestId('nav-link-skills')).toBeVisible();
 			await expect(nav.getByTestId('nav-link-portfolio')).toBeVisible();
 		});
@@ -80,6 +86,7 @@ test.describe('Homepage Core Flows', () => {
 
 			// Verify mobile nav links are visible
 			await expect(drawer.getByTestId('mobile-nav-link-about')).toBeVisible();
+			await expect(drawer.getByTestId('mobile-nav-link-certificates')).toBeVisible();
 			await expect(drawer.getByTestId('mobile-nav-link-skills')).toBeVisible();
 		});
 
@@ -130,118 +137,42 @@ test.describe('Homepage Core Flows', () => {
 	});
 
 	test.describe('Portfolio Filter Flow', () => {
-		test('should show all projects by default', async ({ page }) => {
+		test('should show empty projects grid with all filter active', async ({ page }) => {
 			const projectsGrid = page.getByTestId('projects-grid');
 
-			// Should show all 9 projects
+			// Projects array is currently empty
 			const allProjects = projectsGrid.locator('> div[data-testid^="project-"]');
-			await expect(allProjects).toHaveCount(9);
+			await expect(allProjects).toHaveCount(0);
 
 			// Verify "All Projects" filter is active
 			const allFilter = page.getByTestId('filter-all');
 			await expect(allFilter).toHaveClass(/bg-accent-primary/);
 		});
+	});
 
-		test('should filter to web projects when Web Apps filter is clicked', async ({ page }) => {
-			const projectsGrid = page.getByTestId('projects-grid');
+	test.describe('Skills Accordion', () => {
+		test('should toggle skill category accordion', async ({ page }) => {
+			const techStack = page.getByTestId('tech-stack-section');
 
-			// Click "Web Apps" filter
-			const webFilter = page.getByTestId('filter-web');
-			await webFilter.click();
+			// On desktop, categories should be expanded by default
+			const firstToggle = techStack.getByTestId('tech-category-toggle-前端開發');
+			await expect(firstToggle).toBeVisible();
+			await expect(firstToggle).toHaveAttribute('aria-expanded', 'true');
 
-			// Should show 6 web projects (ecommerce-platform, data-visualization-dashboard,
-			// ai-content-generator, social-media-analytics, real-time-chat-platform, inventory-management-system)
-			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
-			await expect(visibleProjects).toHaveCount(6);
+			// Verify skills are visible
+			await expect(techStack.getByTestId('tech-skill-html')).toBeVisible();
 
-			// Verify the filter is active
-			await expect(webFilter).toHaveClass(/bg-accent-primary/);
+			// Click to collapse
+			await firstToggle.click();
+			await expect(firstToggle).toHaveAttribute('aria-expanded', 'false');
 
-			// Verify specific web projects are visible
-			await expect(projectsGrid.getByTestId('project-ecommerce-platform')).toBeVisible();
-			await expect(projectsGrid.getByTestId('project-real-time-chat-platform')).toBeVisible();
-		});
+			// Skills should be hidden
+			await expect(techStack.getByTestId('tech-skill-html')).not.toBeVisible();
 
-		test('should filter to mobile projects when Mobile Apps filter is clicked', async ({
-			page
-		}) => {
-			const projectsGrid = page.getByTestId('projects-grid');
-
-			// Click "Mobile Apps" filter
-			const mobileFilter = page.getByTestId('filter-mobile');
-			await mobileFilter.click();
-
-			// Should show 2 mobile projects (task-manager-mobile, fitness-tracker-app)
-			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
-			await expect(visibleProjects).toHaveCount(2);
-
-			// Verify the filter is active
-			await expect(mobileFilter).toHaveClass(/bg-accent-primary/);
-
-			// Verify specific mobile projects are visible
-			await expect(projectsGrid.getByTestId('project-task-manager-mobile')).toBeVisible();
-			await expect(projectsGrid.getByTestId('project-fitness-tracker-app')).toBeVisible();
-		});
-
-		test('should filter to data projects when Data & Analytics filter is clicked', async ({
-			page
-		}) => {
-			const projectsGrid = page.getByTestId('projects-grid');
-
-			// Click "Data & Analytics" filter
-			const dataFilter = page.getByTestId('filter-data');
-			await dataFilter.click();
-
-			// Should show 2 data projects (data-visualization-dashboard, social-media-analytics)
-			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
-			await expect(visibleProjects).toHaveCount(2);
-
-			// Verify the filter is active
-			await expect(dataFilter).toHaveClass(/bg-accent-primary/);
-
-			// Verify specific data projects are visible
-			await expect(projectsGrid.getByTestId('project-data-visualization-dashboard')).toBeVisible();
-			await expect(projectsGrid.getByTestId('project-social-media-analytics')).toBeVisible();
-		});
-
-		test('should filter to automation projects when Automation filter is clicked', async ({
-			page
-		}) => {
-			const projectsGrid = page.getByTestId('projects-grid');
-
-			// Click "Automation" filter
-			const automationFilter = page.getByTestId('filter-automation');
-			await automationFilter.click();
-
-			// Should show 3 automation projects (ai-content-generator, devops-automation-suite,
-			// inventory-management-system)
-			const visibleProjects = projectsGrid.locator('> div[data-testid^="project-"]');
-			await expect(visibleProjects).toHaveCount(3);
-
-			// Verify the filter is active
-			await expect(automationFilter).toHaveClass(/bg-accent-primary/);
-
-			// Verify specific automation projects are visible
-			await expect(projectsGrid.getByTestId('project-devops-automation-suite')).toBeVisible();
-			await expect(projectsGrid.getByTestId('project-inventory-management-system')).toBeVisible();
-		});
-
-		test('should return to all projects when All Projects filter is clicked after filtering', async ({
-			page
-		}) => {
-			const projectsGrid = page.getByTestId('projects-grid');
-
-			// First, filter to mobile
-			await page.getByTestId('filter-mobile').click();
-			await expect(projectsGrid.locator('> div[data-testid^="project-"]')).toHaveCount(2);
-
-			// Then click "All Projects"
-			const allFilter = page.getByTestId('filter-all');
-			await allFilter.click();
-
-			// Should show all 9 projects again
-			await expect(projectsGrid.locator('> div[data-testid^="project-"]')).toHaveCount(9);
-			await expect(allFilter).toHaveClass(/bg-accent-primary/);
+			// Click to expand again
+			await firstToggle.click();
+			await expect(firstToggle).toHaveAttribute('aria-expanded', 'true');
+			await expect(techStack.getByTestId('tech-skill-html')).toBeVisible();
 		});
 	});
 
@@ -254,21 +185,6 @@ test.describe('Homepage Core Flows', () => {
 			await expect(ctaAbout).toBeEnabled();
 			await expect(ctaPortfolio).toBeVisible();
 			await expect(ctaPortfolio).toBeEnabled();
-		});
-
-		test('should display project links when available', async ({ page }) => {
-			const projectsGrid = page.getByTestId('projects-grid');
-
-			// E-commerce platform has both GitHub and live URLs
-			const ecommerceProject = projectsGrid.getByTestId('project-ecommerce-platform');
-			await expect(ecommerceProject.getByTestId('project-github-ecommerce-platform')).toBeVisible();
-			await expect(ecommerceProject.getByTestId('project-live-ecommerce-platform')).toBeVisible();
-
-			// Task manager mobile has only GitHub URL
-			const taskManagerProject = projectsGrid.getByTestId('project-task-manager-mobile');
-			await expect(
-				taskManagerProject.getByTestId('project-github-task-manager-mobile')
-			).toBeVisible();
 		});
 	});
 });
