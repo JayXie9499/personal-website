@@ -8,6 +8,7 @@ export interface Education {
 	degree?: string;
 	institution: string;
 	location: string;
+	period: string;
 }
 
 export interface Skill {
@@ -24,6 +25,13 @@ export interface NavigationLink {
 	id: string;
 	label: string;
 	href: string;
+}
+
+export interface Certificate {
+	name: string;
+	issuer: string;
+	date: string;
+	credentialUrl?: string;
 }
 
 export type ProjectType = 'web' | 'mobile' | 'data' | 'automation' | 'all';
@@ -80,15 +88,18 @@ export const socialLinks: SocialLink[] = [
 export const education: Education[] = [
 	{
 		institution: '國立新竹高級工業職業學校',
-		location: '新竹市東區中華路二段2號'
+		location: '新竹市東區中華路二段2號',
+		period: '2020 - 2023'
 	},
 	{
 		institution: '新竹市立光華國民中學',
-		location: '新竹市北區光華北街10號'
+		location: '新竹市北區光華北街10號',
+		period: '2017 - 2020'
 	},
 	{
 		institution: '新竹市北區北門國民小學',
-		location: '新竹市北區水田街33號'
+		location: '新竹市北區水田街33號',
+		period: '2011 - 2017'
 	}
 ];
 
@@ -140,8 +151,29 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [];
 
+export const certificates: Certificate[] = [
+	{
+		name: 'AWS Certified Cloud Practitioner',
+		issuer: 'Amazon Web Services',
+		date: '2023',
+		credentialUrl: 'https://example.com/cert/aws'
+	},
+	{
+		name: 'Google Cloud Digital Leader',
+		issuer: 'Google Cloud',
+		date: '2023',
+		credentialUrl: 'https://example.com/cert/gcp'
+	},
+	{
+		name: 'TOEIC 785',
+		issuer: 'ETS',
+		date: '2022'
+	}
+];
+
 export const navLinks: NavigationLink[] = [
 	{ id: 'about', label: '關於', href: '#about' },
+	{ id: 'certificates', label: '證照', href: '#certificates' },
 	{ id: 'skills', label: '技能', href: '#skills' },
 	{ id: 'portfolio', label: '作品', href: '#portfolio' }
 ];

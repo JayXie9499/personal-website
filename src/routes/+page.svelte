@@ -8,6 +8,7 @@
 		navLinks,
 		typingStrings,
 		projectFilters,
+		certificates,
 		type ProjectType,
 		type Project
 	} from '$lib/data';
@@ -90,6 +91,9 @@
 	let currentCharIndex = $state(0);
 	let isDeleting = $state(false);
 
+	// Skills accordion state - track which categories are expanded
+	let expandedCategories = $state<Set<string>>(new Set());
+
 	// Portfolio filter state
 	let activeFilter = $state<ProjectType>('all');
 	let filteredProjects = $state<Project[]>(projects);
@@ -152,10 +156,39 @@
 
 		type();
 
+		// Initialize accordion state based on viewport
+		const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+		if (isDesktop) {
+			expandedCategories = new Set(skillCategories.map((c) => c.category));
+		}
+
+		// Listen for resize to update default state
+		const mediaQuery = window.matchMedia('(min-width: 768px)');
+		const handleMediaChange = (e: MediaQueryListEvent) => {
+			if (e.matches) {
+				expandedCategories = new Set(skillCategories.map((c) => c.category));
+			} else {
+				expandedCategories = new Set();
+			}
+		};
+		mediaQuery.addEventListener('change', handleMediaChange);
+
 		return () => {
 			clearTimeout(timeout);
+			mediaQuery.removeEventListener('change', handleMediaChange);
 		};
 	});
+
+	// Toggle skill category accordion
+	function toggleCategory(category: string) {
+		const next = new Set(expandedCategories);
+		if (next.has(category)) {
+			next.delete(category);
+		} else {
+			next.add(category);
+		}
+		expandedCategories = next;
+	}
 
 	// Filter projects
 	function filterProjects(type: ProjectType) {
@@ -375,6 +408,43 @@
 						{/each}
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Certificates Section -->
+	<section
+		class="scroll-mt-20 bg-bg-primary px-6 py-24"
+		id="certificates"
+		data-testid="certificates-section"
+	>
+		<div class="mx-auto w-full max-w-max-width px-6">
+			<h2
+				class="relative mb-12 inline-block font-family-display text-[clamp(2rem,5vw,2.5rem)] text-text-primary after:absolute after:bottom-[-0.5rem] after:left-0 after:h-0.75 after:w-full after:bg-[linear-gradient(90deg,var(--color-accent-primary),var(--color-accent-secondary))] after:content-['']"
+			>
+				證書與證照
+			</h2>
+			<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+				{#each certificates as cert (cert.name)}
+					<div
+						class="flex flex-col gap-3 border border-border bg-bg-secondary p-6 transition-all duration-(--transition-base) hover:border-accent-primary"
+						data-testid={`certificate-${cert.name.toLowerCase().replace(/\s+/g, '-')}`}
+					>
+						<h3 class="text-lg font-medium text-text-primary">{cert.name}</h3>
+						<p class="text-sm text-text-secondary">{cert.issuer}</p>
+						<p class="text-sm text-accent-primary">{cert.date}</p>
+						{#if cert.credentialUrl}
+							<a
+								href={cert.credentialUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mt-auto inline-flex items-center gap-2 text-sm text-text-muted transition-colors duration-(--transition-fast) hover:text-accent-primary"
+							>
+								查看證書 →
+							</a>
+						{/if}
+					</div>
+				{/each}
 			</div>
 		</div>
 	</section>
