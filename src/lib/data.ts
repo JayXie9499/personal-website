@@ -184,33 +184,33 @@ export const projects: Project[] = [
 export const certificates: Certificate[] = [
 	{
 		name: 'TOEIC Gold (885)',
-		issuer: '',
-		date: '',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/'
+		issuer: 'ETS',
+		date: '2023',
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/toeic-2023.webp'
 	},
 	{
 		name: '工業電子丙級',
-		issuer: '',
+		issuer: '中華民國勞動部',
 		date: '2023',
 		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/industrial-electronics-c.webp'
 	},
 	{
 		name: '工業配線丙級',
-		issuer: '',
+		issuer: '中華民國勞動部',
 		date: '2022',
 		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/industrial-wiring-c.webp'
 	},
 	{
 		name: 'GEPT 中級',
-		issuer: '',
-		date: '',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/'
+		issuer: 'LTTC',
+		date: '2019',
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/gept-intermediate.webp'
 	},
 	{
 		name: 'GEPT 初級',
-		issuer: '',
-		date: '',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/'
+		issuer: 'LTTC',
+		date: '2018',
+		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/gept-elementary.webp'
 	}
 ];
 
