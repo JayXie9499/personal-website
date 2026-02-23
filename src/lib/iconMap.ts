@@ -4,6 +4,7 @@ import cssSvg from '$lib/assets/css.svg';
 import javascriptSvg from '$lib/assets/javascript.svg';
 import typescriptSvg from '$lib/assets/typescript.svg';
 import svelteSvg from '$lib/assets/svelte.svg';
+import vuedotjsSvg from '$lib/assets/vuedotjs.svg';
 import tailwindcssSvg from '$lib/assets/tailwindcss.svg';
 import flutterSvg from '$lib/assets/flutter.svg';
 import nodedotjsSvg from '$lib/assets/nodedotjs.svg';
@@ -27,7 +28,6 @@ import facebookSvg from '$lib/assets/facebook.svg';
 import discordSvg from '$lib/assets/discord.svg';
 import githubSvg from '$lib/assets/github.svg';
 import linkedinSvg from '$lib/assets/linkedin.svg';
-import xSvg from '$lib/assets/x.svg';
 import mailSvg from '$lib/assets/mail.svg';
 // Contact SVGs
 import locationSvg from '$lib/assets/location.svg';
@@ -38,6 +38,7 @@ export const iconMap: Record<string, string> = {
 	javascript: javascriptSvg,
 	typescript: typescriptSvg,
 	svelte: svelteSvg,
+	vuedotjs: vuedotjsSvg,
 	tailwindcss: tailwindcssSvg,
 	flutter: flutterSvg,
 	nodedotjs: nodedotjsSvg,
@@ -60,7 +61,6 @@ export const iconMap: Record<string, string> = {
 	discord: discordSvg,
 	github: githubSvg,
 	linkedin: linkedinSvg,
-	x: xSvg,
 	mail: mailSvg,
 	location: locationSvg
 };
