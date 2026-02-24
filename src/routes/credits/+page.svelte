@@ -7,8 +7,16 @@
 	<title>Icon Credits | 謝孟哲</title>
 	<meta
 		name="description"
-		content="技能區塊使用之 Icon 來源與授權資訊，包含作者/來源專案與授權條款。"
+		content="本網頁使用之 Icon 來源與授權資訊，包含作者 / 來源專案與授權條款。"
 	/>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "Icon Credits | 謝孟哲",
+			"url": "https://www.hsieh-dev.us.ci/credits"
+		}
+	</script>
 </svelte:head>
 
 <div class="min-h-screen bg-bg-primary px-6 py-24 text-text-primary">
@@ -27,7 +35,7 @@
 		</div>
 
 		<div class="overflow-x-auto border border-border bg-bg-secondary">
-			<table class="w-full min-w-[920px] border-collapse text-left text-sm">
+			<table class="w-full min-w-230 border-collapse text-left text-sm">
 				<thead>
 					<tr class="border-b border-border bg-bg-tertiary text-text-secondary">
 						<th class="px-4 py-3">Icon</th>

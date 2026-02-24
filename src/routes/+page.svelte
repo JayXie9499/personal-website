@@ -10,11 +10,18 @@
 </script>
 
 <svelte:head>
-	<title>{resume.name} - {resume.title}</title>
 	<meta name="description" content={resume.about.join('')} />
 	<meta name="og:title" content="謝孟哲 - 全端工程師" />
 	<meta name="og:description" content={resume.about.join('')} />
-	<link rel="alternate" hreflang="zh" href="https://www.hsieh-dev.us.ci" />
+	<title>{resume.name} - {resume.title}</title>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org/",
+			"@type": "WebSite",
+			"name": "謝孟哲 - 全端工程師",
+			"url": "https://www.hsieh-dev.us.ci"
+		}
+	</script>
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">

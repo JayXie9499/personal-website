@@ -10,18 +10,17 @@
 	<link rel="icon" href={favicon} />
 	<link rel="canonical" href="https://www.hsieh-dev.us.ci{page.url.pathname}" />
 	<meta name="author" content="謝孟哲" />
-	<meta name="og:type" content="website" />
-	<meta name="og:url" content="https://www.hsieh-dev.us.ci{page.url.pathname}" />
-	<meta name="og:locale" content="zh_TW" />
-	<meta name="og:site_name" content="謝孟哲 - 全端工程師" />
-	<script type="application/ld+json">
-		{
-			"@context": "https://schema.org/",
-			"@type": "WebSite",
-			"name": "謝孟哲 - 全端工程師",
-			"url": "https://www.hsieh-dev.us.ci"
-		}
-	</script>
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://cdn.hsieh-dev.us.ci/icons/favicon.ico" />
+	<meta property="og:image:type" content="image/x-icon" />
+	<meta
+		property="og:image:alt"
+		content="A white rounded square icon featuring the black Chinese character '哲' in the center, with blue L-shaped corner borders at the top-left and bottom-right."
+	/>
+	<meta property="og:url" content="https://www.hsieh-dev.us.ci{page.url.pathname}" />
+	<meta property="og:locale" content="zh_TW" />
+	<meta property="og:locale_alternate" content="en_US" />
+	<meta property="og:site_name" content="謝孟哲 - 全端工程師" />
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org/",
@@ -50,14 +49,26 @@
 				{
 					"@type": "ListItem",
 					"position": 2,
+					"name": "Icon Credits | 謝孟哲",
+					"item": "https://www.hsieh-dev.us.ci/credits"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
 					"name": "Daily Quote Generator",
 					"item": "https://www.hsieh-dev.us.ci/daily-quote-generator"
 				},
 				{
 					"@type": "ListItem",
-					"position": 3,
+					"position": 4,
 					"name": "Password Strength Checker",
 					"item": "https://www.hsieh-dev.us.ci/password-strength-checker"
+				},
+				{
+					"@type": "ListItem",
+					"position": 5,
+					"name": "Pomodoro Timer",
+					"item": "https://www.hsieh-dev.us.ci/pomodoro-timer"
 				}
 			]
 		}
