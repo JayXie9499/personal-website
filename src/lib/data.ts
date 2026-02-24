@@ -431,7 +431,7 @@ export const projects: Project[] = [
 		description:
 			'A simple Pomodoro timer built with Vue 3. Supports custom intervals, plays a ringtone at phase transitions, and allows volume adjustment.',
 		type: [],
-		technologies: ['Vue.js'],
+		technologies: ['Vue.js', 'CSS', 'JavaScript'],
 		githubUrl: 'https://github.com/JayXie9499/pomodoro-timer',
 		liveUrl: '/pomodoro-timer'
 	}
