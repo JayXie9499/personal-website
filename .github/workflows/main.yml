@@ -16,6 +16,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      PUBLIC_CDN_URL: https://cdn.hsieh-dev.us.ci
     runs-on: ubuntu-latest
 
     steps:
