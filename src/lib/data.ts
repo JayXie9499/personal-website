@@ -401,6 +401,14 @@ export const iconCredits: IconCredit[] = [
 		sourceUrl: 'https://lucide.dev/icons/map-pin',
 		modified: true,
 		note: 'Modified for color fill. Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		name: 'Link',
+		icon: 'link',
+		sourceName: 'Lucide',
+		sourceUrl: 'https://lucide.dev/icons/square-arrow-out-up-right',
+		modified: true,
+		note: 'Modified for color fill. Brand names and trademarks belong to their respective owners.'
 	}
 ];
 

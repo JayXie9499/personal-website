@@ -1,66 +1,35 @@
-// Skill SVGs
-import html5Svg from '$lib/assets/html5.svg';
-import cssSvg from '$lib/assets/css.svg';
-import javascriptSvg from '$lib/assets/javascript.svg';
-import typescriptSvg from '$lib/assets/typescript.svg';
-import svelteSvg from '$lib/assets/svelte.svg';
-import vuedotjsSvg from '$lib/assets/vuedotjs.svg';
-import tailwindcssSvg from '$lib/assets/tailwindcss.svg';
-import flutterSvg from '$lib/assets/flutter.svg';
-import nodedotjsSvg from '$lib/assets/nodedotjs.svg';
-import pythonSvg from '$lib/assets/python.svg';
-import expressSvg from '$lib/assets/express.svg';
-import fastapiSvg from '$lib/assets/fastapi.svg';
-import restSvg from '$lib/assets/rest.svg';
-import graphqlSvg from '$lib/assets/graphql.svg';
-import postgresqlSvg from '$lib/assets/postgresql.svg';
-import redisSvg from '$lib/assets/redis.svg';
-import mongodbSvg from '$lib/assets/mongodb.svg';
-import sqliteSvg from '$lib/assets/sqlite.svg';
-import dockerSvg from '$lib/assets/docker.svg';
-import githubactionsSvg from '$lib/assets/githubactions.svg';
-import awsSvg from '$lib/assets/aws.svg';
-import googlecloudSvg from '$lib/assets/googlecloud.svg';
-import railwaySvg from '$lib/assets/railway.svg';
-import cloudflareSvg from '$lib/assets/cloudflare.svg';
-// Social SVGs
-import facebookSvg from '$lib/assets/facebook.svg';
-import discordSvg from '$lib/assets/discord.svg';
-import githubSvg from '$lib/assets/github.svg';
-import linkedinSvg from '$lib/assets/linkedin.svg';
-import mailSvg from '$lib/assets/mail.svg';
-// Contact SVGs
-import locationSvg from '$lib/assets/location.svg';
+import { PUBLIC_CDN_URL } from '$env/static/public';
 
 export const iconMap: Record<string, string> = {
-	html5: html5Svg,
-	css: cssSvg,
-	javascript: javascriptSvg,
-	typescript: typescriptSvg,
-	svelte: svelteSvg,
-	vuedotjs: vuedotjsSvg,
-	tailwindcss: tailwindcssSvg,
-	flutter: flutterSvg,
-	nodedotjs: nodedotjsSvg,
-	python: pythonSvg,
-	express: expressSvg,
-	fastapi: fastapiSvg,
-	rest: restSvg,
-	graphql: graphqlSvg,
-	postgresql: postgresqlSvg,
-	redis: redisSvg,
-	mongodb: mongodbSvg,
-	sqlite: sqliteSvg,
-	docker: dockerSvg,
-	githubactions: githubactionsSvg,
-	aws: awsSvg,
-	googlecloud: googlecloudSvg,
-	railway: railwaySvg,
-	cloudflare: cloudflareSvg,
-	facebook: facebookSvg,
-	discord: discordSvg,
-	github: githubSvg,
-	linkedin: linkedinSvg,
-	mail: mailSvg,
-	location: locationSvg
+	html5: `${PUBLIC_CDN_URL}/icons/html5.svg`,
+	css: `${PUBLIC_CDN_URL}/icons/css.svg`,
+	javascript: `${PUBLIC_CDN_URL}/icons/javascript.svg`,
+	typescript: `${PUBLIC_CDN_URL}/icons/typescript.svg`,
+	svelte: `${PUBLIC_CDN_URL}/icons/svelte.svg`,
+	vuedotjs: `${PUBLIC_CDN_URL}/icons/vuedotjs.svg`,
+	tailwindcss: `${PUBLIC_CDN_URL}/icons/tailwindcss.svg`,
+	flutter: `${PUBLIC_CDN_URL}/icons/flutter.svg`,
+	nodedotjs: `${PUBLIC_CDN_URL}/icons/nodedotjs.svg`,
+	python: `${PUBLIC_CDN_URL}/icons/python.svg`,
+	express: `${PUBLIC_CDN_URL}/icons/express.svg`,
+	fastapi: `${PUBLIC_CDN_URL}/icons/fastapi.svg`,
+	rest: `${PUBLIC_CDN_URL}/icons/rest.svg`,
+	graphql: `${PUBLIC_CDN_URL}/icons/graphql.svg`,
+	postgresql: `${PUBLIC_CDN_URL}/icons/postgresql.svg`,
+	redis: `${PUBLIC_CDN_URL}/icons/redis.svg`,
+	mongodb: `${PUBLIC_CDN_URL}/icons/mongodb.svg`,
+	sqlite: `${PUBLIC_CDN_URL}/icons/sqlite.svg`,
+	docker: `${PUBLIC_CDN_URL}/icons/docker.svg`,
+	githubactions: `${PUBLIC_CDN_URL}/icons/githubactions.svg`,
+	aws: `${PUBLIC_CDN_URL}/icons/aws.svg`,
+	googlecloud: `${PUBLIC_CDN_URL}/icons/googlecloud.svg`,
+	railway: `${PUBLIC_CDN_URL}/icons/railway.svg`,
+	cloudflare: `${PUBLIC_CDN_URL}/icons/cloudflare.svg`,
+	facebook: `${PUBLIC_CDN_URL}/icons/facebook.svg`,
+	discord: `${PUBLIC_CDN_URL}/icons/discord.svg`,
+	github: `${PUBLIC_CDN_URL}/icons/github.svg`,
+	linkedin: `${PUBLIC_CDN_URL}/icons/linkedin.svg`,
+	mail: `${PUBLIC_CDN_URL}/icons/mail.svg`,
+	location: `${PUBLIC_CDN_URL}/icons/location.svg`,
+	link: `${PUBLIC_CDN_URL}/icons/link.svg`
 };

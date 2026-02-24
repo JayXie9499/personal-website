@@ -1,13 +1,12 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import { page } from '$app/state';
 
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href="https://cdn.hsieh-dev.us.ci/icons/favicon.ico" />
 	<link rel="canonical" href="https://www.hsieh-dev.us.ci{page.url.pathname}" />
 	<meta name="author" content="謝孟哲" />
 	<meta property="og:type" content="website" />
