@@ -442,6 +442,15 @@ export const projects: Project[] = [
 		technologies: ['Vue.js', 'CSS', 'JavaScript', 'RWD'],
 		githubUrl: 'https://github.com/JayXie9499/pomodoro-timer',
 		liveUrl: '/pomodoro-timer'
+	},
+	{
+		id: '4',
+		title: 'CSS 3D',
+		description: 'A small demo showing simple CSS 3D cubes with X/Y spin animations.',
+		type: [],
+		technologies: ['HTML', 'CSS', 'RWD'],
+		githubUrl: 'https://github.com/JayXie9499/css-3d',
+		liveUrl: '/css-3d'
 	}
 ];
 
