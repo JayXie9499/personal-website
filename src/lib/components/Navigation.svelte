@@ -28,7 +28,7 @@
 		</button>
 
 		<!-- Desktop Navigation -->
-		<div class="hidden gap-8 md:flex" data-testid="desktop-nav">
+		<div class="hidden gap-8 font-family-display md:flex" data-testid="desktop-nav">
 			{#each navLinks as link (link.href)}
 				<a
 					href={link.href}

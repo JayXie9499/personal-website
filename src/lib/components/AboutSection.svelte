@@ -14,7 +14,7 @@
 				>
 					關於我
 				</h2>
-				<div>
+				<div class="font-family-cjk">
 					{#each resume.about as line, i (i)}
 						<p class="leading-[1.8] text-text-secondary">{line}</p>
 					{/each}
