@@ -1,5 +1,22 @@
 <script lang="ts">
 	import './layout.css';
+	import '@fontsource/monaspace-neon/400.css';
+	import '@fontsource/monaspace-neon/500.css';
+	import '@fontsource/monaspace-neon/600.css';
+	import '@fontsource/intel-one-mono/latin-400.css';
+	import '@fontsource/intel-one-mono/latin-500.css';
+	import '@fontsource/intel-one-mono/latin-600.css';
+	import '@fontsource/space-grotesk/latin-400.css';
+	import '@fontsource/space-grotesk/latin-500.css';
+	import '@fontsource/space-grotesk/latin-700.css';
+	import '@fontsource/syne/latin-400.css';
+	import '@fontsource/syne/latin-500.css';
+	import '@fontsource/syne/latin-700.css';
+	import '@fontsource/lxgw-wenkai-tc/chinese-traditional-400.css';
+	import '@fontsource/lxgw-wenkai-tc/chinese-traditional-700.css';
+	import '@fontsource/noto-sans-tc/chinese-traditional-400.css';
+	import '@fontsource/noto-sans-tc/chinese-traditional-500.css';
+	import '@fontsource/noto-sans-tc/chinese-traditional-700.css';
 	import { page } from '$app/state';
 
 	let { children } = $props();
@@ -8,18 +25,6 @@
 <svelte:head>
 	<link rel="icon" href="https://cdn.hsieh-dev.us.ci/icons/favicon.ico" />
 	<link rel="canonical" href="https://www.hsieh-dev.us.ci{page.url.pathname}" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
-		rel="stylesheet"
-		media="print"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-neon@5.2.5/index.min.css"
-		media="print"
-	/>
 	<meta name="author" content="謝孟哲" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://cdn.hsieh-dev.us.ci/icons/favicon.ico" />

@@ -19,10 +19,12 @@
 	--color-error: #ef4444;
 
 	/* Typography */
-	--font-family-primary: 'Monaspace Neon', 'Intel One Mono', monospace;
-	--font-family-mono: 'Monaspace Neon', 'Intel One Mono', monospace;
-	--font-family-display: 'Syne', 'Space Grotesk', sans-serif;
-	--font-family-cjk: 'LXGW WenKai TC', 'Noto Sans TC', serif;
+	--font-family-primary:
+		'Monaspace Neon', 'Intel One Mono', 'LXGW WenKai TC', 'Noto Sans TC', monospace;
+	--font-family-mono:
+		'Monaspace Neon', 'Intel One Mono', 'LXGW WenKai TC', 'Noto Sans TC', monospace;
+	--font-family-display: 'Syne', 'Space Grotesk', 'LXGW WenKai TC', 'Noto Sans TC', sans-serif;
+	--font-family-cjk: 'LXGW WenKai TC', 'Noto Sans TC', sans-serif;
 
 	/* Spacing */
 	--spacing-xs: 0.5rem;
@@ -58,7 +60,7 @@ html {
 }
 
 body {
-	font-family: var(--font-family-primary), var(--font-family-cjk);
+	font-family: var(--font-family-primary);
 	background-color: var(--color-bg-primary);
 	color: var(--color-text-primary);
 }
