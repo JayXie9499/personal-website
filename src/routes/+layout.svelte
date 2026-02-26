@@ -8,6 +8,18 @@
 <svelte:head>
 	<link rel="icon" href="https://cdn.hsieh-dev.us.ci/icons/favicon.ico" />
 	<link rel="canonical" href="https://www.hsieh-dev.us.ci{page.url.pathname}" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;500;600;700&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
+		rel="stylesheet"
+		media="print"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@fontsource/monaspace-neon@5.2.5/index.min.css"
+		media="print"
+	/>
 	<meta name="author" content="謝孟哲" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://cdn.hsieh-dev.us.ci/icons/favicon.ico" />
