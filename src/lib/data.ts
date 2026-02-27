@@ -471,6 +471,16 @@ export const projects: Project[] = [
 		technologies: ['HTML', 'CSS', 'RWD'],
 		githubUrl: 'https://github.com/jaydev0220/css-3d',
 		liveUrl: '/css-3d'
+	},
+	{
+		id: '5',
+		title: 'Simple TODO List',
+		description:
+			'A simple TODO list built with React, TypeScript and Vite. It demonstrates a small component-based UI with local persistence and a light / dark theme switch.',
+		type: [],
+		technologies: ['React', 'CSS', 'TypeScript', 'RWD'],
+		githubUrl: 'https://github.com/jaydev0220/simple-todo-list',
+		liveUrl: '/simple-todo-list'
 	}
 ];
 

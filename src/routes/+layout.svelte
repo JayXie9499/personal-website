@@ -92,6 +92,12 @@
 					"position": 6,
 					"name": "CSS 3D",
 					"item": "https://www.hsieh-dev.us.ci/css-3d"
+				},
+				{
+					"@type": "ListItem",
+					"position": 7,
+					"name": "Simple TODO List",
+					"item": "https://www.hsieh-dev.us.ci/simple-todo-list"
 				}
 			]
 		}
