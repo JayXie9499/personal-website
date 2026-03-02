@@ -51,7 +51,7 @@
 				"https://github.com/jaydev0220",
 				"https://x.com/jay_dev0220"
 			],
-			"jobTitle": "學生"
+			"jobTitle": "全端工程師"
 		}
 	</script>
 	<script type="application/ld+json">
