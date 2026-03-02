@@ -41,6 +41,9 @@ jobs:
       - name: Build site
         run: pnpm run build
 
+      - name: Generate sitemap
+        run: pnpm run postbuild -d https://www.hsieh-dev.us.ci
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
