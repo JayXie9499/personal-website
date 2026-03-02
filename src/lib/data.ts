@@ -494,8 +494,9 @@ export const projects: Project[] = [
 	},
 	{
 		id: '7',
-		title: '水水 個人網頁',
-		description: '',
+		title: 'Personal Website (水水)',
+		description:
+			'A modern, high-performance personal website for 水水 (SuiSui), a VTuber and content creator. Built with cutting-edge web technologies and optimized for static deployment.',
 		type: [],
 		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript'],
 		githubUrl: 'https://github.com/suisui0528/suisui0528.github.io',
