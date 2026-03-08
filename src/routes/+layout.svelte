@@ -106,6 +106,12 @@
 					"position": 8,
 					"name": "Color Palette",
 					"item": "https://www.hsieh-dev.us.ci/color-palette"
+				},
+				{
+					"@type": "ListItem",
+					"position": 8,
+					"name": "Unlockture 2025 Memorial",
+					"item": "https://www.hsieh-dev.us.ci/unlockture-2025-memorial"
 				}
 			]
 		}
