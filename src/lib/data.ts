@@ -512,6 +512,16 @@ export const projects: Project[] = [
 		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD'],
 		githubUrl: 'https://github.com/suisui0528/suisui0528.github.io',
 		liveUrl: 'https://suisui0528.github.io'
+	},
+	{
+		id: '8',
+		title: 'Unlockture 2025 Memorial',
+		description:
+			'An interactive full-screen scrolling experience built with Vue 3 and TypeScript. This project showcases a custom scroll hijacking mechanism with smooth fullscreen transitions and multi-section navigation.',
+		type: [],
+		technologies: ['Vue.js', 'Sass', 'TypeScript', 'RWD'],
+		githubUrl: 'https://github.com/jaydev0220/unlockture-2025-memorial',
+		liveUrl: '/unlockture-2025-memorial'
 	}
 ];
 
