@@ -509,7 +509,7 @@ export const projects: Project[] = [
 		description:
 			'A modern, high-performance personal website for 水水 (SuiSui), a VTuber and content creator. Built with cutting-edge web technologies and optimized for static deployment.',
 		type: [],
-		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript'],
+		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD'],
 		githubUrl: 'https://github.com/suisui0528/suisui0528.github.io',
 		liveUrl: 'https://suisui0528.github.io'
 	}
