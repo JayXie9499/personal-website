@@ -140,6 +140,7 @@ export const skillCategories: SkillCategory[] = [
 			{ name: 'Vue.js', icon: 'vuedotjs' },
 			{ name: 'React', icon: 'react' },
 			{ name: 'Tailwind CSS', icon: 'tailwindcss' },
+			{ name: 'Sass', icon: 'sass' },
 			{ name: 'Flutter', icon: 'flutter' }
 		]
 	},
@@ -429,6 +430,16 @@ export const iconCredits: IconCredit[] = [
 		sourceName: 'Wikimedia Commons',
 		sourceUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
 		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		name: 'Sass',
+		icon: 'sass',
+		sourceName: 'Simple Icons',
+		sourceUrl: 'https://simpleicons.org/icons/sass.svg',
+		license: 'CC-BY-NC-SA-3.0',
+		licenseUrl: 'https://spdx.org/licenses/CC-BY-NC-SA-3.0',
+		modified: true,
+		note: 'Modified for color fill. Brand names and trademarks belong to their respective owners.'
 	}
 ];
 
