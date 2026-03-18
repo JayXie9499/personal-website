@@ -84,11 +84,6 @@ export const socialLinks: SocialLink[] = [
 		icon: 'facebook'
 	},
 	{
-		name: 'X',
-		url: 'https://x.com/jay_dev0220',
-		icon: 'x'
-	},
-	{
 		name: 'Discord',
 		url: 'https://discordapp.com/users/263613963034427392',
 		icon: 'discord'
@@ -416,13 +411,6 @@ export const iconCredits: IconCredit[] = [
 		sourceUrl: 'https://lucide.dev/icons/square-arrow-out-up-right',
 		modified: true,
 		note: 'Modified for color fill. Brand names and trademarks belong to their respective owners.'
-	},
-	{
-		name: 'X',
-		icon: 'x',
-		sourceName: 'X',
-		sourceUrl: 'https://about.x.com/who-we-are/brand-toolkit',
-		note: 'Brand names and trademarks belong to their respective owners.'
 	},
 	{
 		name: 'React',

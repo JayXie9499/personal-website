@@ -48,8 +48,7 @@
 			"sameAs": [
 				"https://www.facebook.com/jaydev0220/",
 				"https://linkedin.com/in/mengche0220",
-				"https://github.com/jaydev0220",
-				"https://x.com/jay_dev0220"
+				"https://github.com/jaydev0220"
 			],
 			"jobTitle": "全端工程師"
 		}

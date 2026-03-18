@@ -32,7 +32,6 @@ export const iconMap: Record<string, string> = {
 	mail: `${PUBLIC_CDN_URL}/icons/mail.svg`,
 	location: `${PUBLIC_CDN_URL}/icons/location.svg`,
 	link: `${PUBLIC_CDN_URL}/icons/link.svg`,
-	x: `${PUBLIC_CDN_URL}/icons/x.svg`,
 	react: `${PUBLIC_CDN_URL}/icons/react.svg`,
 	sass: `${PUBLIC_CDN_URL}/icons/sass.svg`
 };
