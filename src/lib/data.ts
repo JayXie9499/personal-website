@@ -429,6 +429,13 @@ export const iconCredits: IconCredit[] = [
 		licenseUrl: 'https://spdx.org/licenses/CC-BY-NC-SA-3.0',
 		modified: true,
 		note: 'Modified for color fill. Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		name: 'NGINX',
+		icon: 'nginx',
+		sourceName: 'SVG LOGOS',
+		sourceUrl: 'https://svglogos.dev',
+		note: 'Brand names and trademarks belong to their respective owners.'
 	}
 ];
 
