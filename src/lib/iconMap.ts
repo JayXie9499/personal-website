@@ -34,5 +34,6 @@ export const iconMap: Record<string, string> = {
 	link: `${PUBLIC_CDN_URL}/icons/link.svg`,
 	react: `${PUBLIC_CDN_URL}/icons/react.svg`,
 	sass: `${PUBLIC_CDN_URL}/icons/sass.svg`,
-	nginx: `${PUBLIC_CDN_URL}/icons/nginx.svg`
+	nginx: `${PUBLIC_CDN_URL}/icons/nginx.svg`,
+	vercel: `${PUBLIC_CDN_URL}/icons/vercel.svg`
 };

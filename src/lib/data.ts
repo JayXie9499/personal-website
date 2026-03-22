@@ -436,6 +436,13 @@ export const iconCredits: IconCredit[] = [
 		sourceName: 'SVG LOGOS',
 		sourceUrl: 'https://svglogos.dev',
 		note: 'Brand names and trademarks belong to their respective owners.'
+	},
+	{
+		name: 'Vercel',
+		icon: 'vercel',
+		sourceName: 'Vercel',
+		sourceUrl: 'https://vercel.com/geist/brands',
+		note: 'Brand names and trademarks belong to their respective owners.'
 	}
 ];
 
