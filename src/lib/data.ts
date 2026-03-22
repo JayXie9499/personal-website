@@ -166,6 +166,7 @@ export const skillCategories: SkillCategory[] = [
 			{ name: 'GitHub Actions', icon: 'githubactions' },
 			{ name: 'AWS', icon: 'aws' },
 			{ name: 'GCP', icon: 'googlecloud' },
+			{ name: 'Vercel', icon: 'vercel' },
 			{ name: 'Railway', icon: 'railway' },
 			{ name: 'Cloudflare', icon: 'cloudflare' },
 			{ name: 'NGINX', icon: 'nginx' }
