@@ -526,6 +526,16 @@ export const projects: Project[] = [
 		technologies: ['Vue.js', 'Sass', 'TypeScript', 'RWD'],
 		githubUrl: 'https://github.com/jaydev0220/unlockture-2025-memorial',
 		liveUrl: '/unlockture-2025-memorial'
+	},
+	{
+		id: '9',
+		title: 'Ping Board',
+		description:
+			'A distributed URL uptime monitoring service with status pages. Ping Board continuously monitors registered services, logs uptime and latency data, and displays 90-day historical trends on a responsive dashboard.',
+		type: [],
+		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD', 'Express'],
+		githubUrl: 'https://github.com/jaydev0220/ping-board',
+		liveUrl: 'https://ping-board.hsieh-dev.us.ci'
 	}
 ];
 

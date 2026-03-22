@@ -111,6 +111,12 @@
 					"position": 8,
 					"name": "Unlockture 2025 Memorial",
 					"item": "https://www.hsieh-dev.us.ci/unlockture-2025-memorial"
+				},
+				{
+					"@type": "ListItem",
+					"position": 8,
+					"name": "Ping Board",
+					"item": "https://ping-board.hsieh-dev.us.ci"
 				}
 			]
 		}
