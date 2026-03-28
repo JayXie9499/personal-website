@@ -537,6 +537,16 @@ export const projects: Project[] = [
 		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD', 'Express'],
 		githubUrl: 'https://github.com/jaydev0220/ping-board',
 		liveUrl: 'https://ping-board.hsieh-dev.us.ci'
+	},
+	{
+		id: '10',
+		title: "Butter's Personal Website",
+		description:
+			'A performant Svelte website for Butter 巴特, combining theme tokens, Runes-based state management, and responsive design for a refined personal brand presence.',
+		type: [],
+		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD'],
+		githubUrl: 'https://github.com/eddyb5201314-afk/eddyb5201314-afk.github.io',
+		liveUrl: 'https://eddyb5201314-afk.github.io'
 	}
 ];
 
