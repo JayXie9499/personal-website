@@ -452,7 +452,7 @@ export const projects: Project[] = [
 		id: '1',
 		title: 'Daily Quote Generator',
 		description:
-			'A simple web app that displays a random daily quote, built with HTML, CSS, and JavaScript.',
+			'A lightweight quote app that serves random daily inspiration, stores in local storage, and delivers a responsive, polished reading experience with clean vanilla HTML, CSS, and JavaScript.',
 		type: [],
 		technologies: ['HTML', 'CSS', 'JavaScript', 'RWD', 'Local Storage'],
 		githubUrl: 'https://github.com/jaydev0220/daily-quote-generator',
@@ -462,7 +462,7 @@ export const projects: Project[] = [
 		id: '2',
 		title: 'Password Strength Checker',
 		description:
-			'A password strength checker that evaluates passwords based on length, character diversity, and common patterns, providing feedback and suggestions.',
+			'A Python password analyzer that scores strength by length, entropy signals, and common-pattern detection, then returns actionable guidance to improve security.',
 		type: [],
 		technologies: ['Python'],
 		githubUrl: 'https://github.com/jaydev0220/password-strength-checker',
@@ -472,7 +472,7 @@ export const projects: Project[] = [
 		id: '3',
 		title: 'Pomodoro Timer',
 		description:
-			'A simple Pomodoro timer built with Vue 3. Supports custom intervals, plays a ringtone at phase transitions, and allows volume adjustment.',
+			'A Vue 3 productivity timer with configurable work and break cycles, transition alerts, and volume control, designed for focused deep-work sessions across devices.',
 		type: [],
 		technologies: ['Vue.js', 'CSS', 'JavaScript', 'RWD'],
 		githubUrl: 'https://github.com/jaydev0220/pomodoro-timer',
@@ -481,7 +481,8 @@ export const projects: Project[] = [
 	{
 		id: '4',
 		title: 'CSS 3D',
-		description: 'A small demo showing simple CSS 3D cubes with X/Y spin animations.',
+		description:
+			'A compact CSS 3D demo showcasing animated cubes, layered transforms, and axis-based spin effects, built to demonstrate spatial motion and modern CSS rendering.',
 		type: [],
 		technologies: ['HTML', 'CSS', 'RWD'],
 		githubUrl: 'https://github.com/jaydev0220/css-3d',
@@ -491,7 +492,7 @@ export const projects: Project[] = [
 		id: '5',
 		title: 'Simple TODO List',
 		description:
-			'A simple TODO list built with React, TypeScript and Vite. It demonstrates a small component-based UI with local persistence and a light / dark theme switch.',
+			'A React and TypeScript task manager with local persistence, theme switching, and component-based state handling, built for clear UX and maintainable front-end architecture.',
 		type: [],
 		technologies: ['React', 'CSS', 'TypeScript', 'RWD'],
 		githubUrl: 'https://github.com/jaydev0220/simple-todo-list',
@@ -501,7 +502,7 @@ export const projects: Project[] = [
 		id: '6',
 		title: 'Color Palette',
 		description:
-			'A fast and reactive color palette generator and theme preview tool. Built to help developers and designers visualize and tweak UI color schemes in real time, then easily export their work.',
+			'A fast Svelte tool for generating, previewing, and refining color systems in real time, helping developers and designers build consistent UI themes with export-ready output.',
 		type: [],
 		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript'],
 		githubUrl: 'https://github.com/jaydev0220/color-palette',
@@ -509,9 +510,9 @@ export const projects: Project[] = [
 	},
 	{
 		id: '7',
-		title: 'Personal Website (水水)',
+		title: "SuiSui's Personal Website",
 		description:
-			'A modern, high-performance personal website for 水水 (SuiSui), a VTuber and content creator. Built with cutting-edge web technologies and optimized for static deployment.',
+			'A high-performance Svelte website for VTuber 水水, optimized for static deployment, responsive presentation, and a modern branded fan experience.',
 		type: [],
 		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD'],
 		githubUrl: 'https://github.com/suisui0528/suisui0528.github.io',
@@ -521,7 +522,7 @@ export const projects: Project[] = [
 		id: '8',
 		title: 'Unlockture 2025 Memorial',
 		description:
-			'An interactive full-screen scrolling experience built with Vue 3 and TypeScript. This project showcases a custom scroll hijacking mechanism with smooth fullscreen transitions and multi-section navigation.',
+			'An immersive Vue 3 fullscreen storytelling experience with custom scroll behavior, smooth section transitions, and multi-section navigation for high-impact event presentation.',
 		type: [],
 		technologies: ['Vue.js', 'Sass', 'TypeScript', 'RWD'],
 		githubUrl: 'https://github.com/jaydev0220/unlockture-2025-memorial',
@@ -531,7 +532,7 @@ export const projects: Project[] = [
 		id: '9',
 		title: 'Ping Board',
 		description:
-			'A distributed URL uptime monitoring service with status pages. Ping Board continuously monitors registered services, logs uptime and latency data, and displays 90-day historical trends on a responsive dashboard.',
+			'A distributed uptime monitoring platform with status pages, latency tracking, and 90-day historical charts, built for reliable service observability and responsive dashboard visibility.',
 		type: [],
 		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD', 'Express'],
 		githubUrl: 'https://github.com/jaydev0220/ping-board',
