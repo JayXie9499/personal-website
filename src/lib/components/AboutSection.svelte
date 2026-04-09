@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
 	import { resume, education, socialLinks } from '$lib/data';
-	import { iconMap } from '$lib/iconMap';
 </script>
 
 <!-- About + Education Section -->
@@ -27,13 +27,13 @@
 						<div
 							class="flex items-center gap-4 p-2 text-text-secondary transition-colors duration-(--transition-fast) hover:text-accent-primary"
 						>
-							<img src={iconMap['mail']} alt="Email" loading="lazy" class="h-5 w-5" />
+							<Icon icon="lucide:mail" width="20" height="20" />
 							<span>{resume.email}</span>
 						</div>
 						<div
 							class="flex items-center gap-4 p-2 text-text-secondary transition-colors duration-(--transition-fast) hover:text-accent-primary"
 						>
-							<img src={iconMap['location']} alt="Location" loading="lazy" class="h-5 w-5" />
+							<Icon icon="lucide:map-pin" width="20" height="20" />
 							<span>{resume.location}</span>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
 								class="flex items-center gap-2 border border-transparent bg-bg-tertiary px-3 py-4 transition-all duration-(--transition-base) hover:border-accent-primary hover:bg-bg-primary md:px-6"
 								data-testid={`social-${social.name.toLowerCase()}`}
 							>
-								<img src={iconMap[social.icon]} alt={social.name} loading="lazy" class="h-6 w-6" />
+								<Icon icon={social.icon} width="24" height="24" />
 								<span class="hidden font-medium text-text-secondary md:inline">{social.name}</span>
 							</a>
 						{/each}

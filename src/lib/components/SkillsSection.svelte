@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
 	import { skillCategories } from '$lib/data';
-	import { iconMap } from '$lib/iconMap';
 	import { onMount } from 'svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 
@@ -74,15 +74,10 @@
 										class="flex flex-col items-center gap-2 border border-transparent bg-bg-tertiary p-6 transition-all duration-(--transition-base) hover:border-accent-primary"
 										data-testid={`tech-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
 									>
-										<img
-											src={iconMap[skill.icon]}
-											alt={skill.name}
-											loading="lazy"
-											class="h-8 w-auto"
-										/>
-										<span class="text-center text-sm font-medium text-text-secondary"
-											>{skill.name}</span
-										>
+										<Icon icon={skill.icon} width="36" height="36" />
+										<span class="text-center text-sm font-medium text-text-secondary">
+											{skill.name}
+										</span>
 									</div>
 								{/each}
 							</div>
