@@ -58,7 +58,7 @@ export const resume: ResumeData = {
 	name: '謝孟哲',
 	title: '全端工程師',
 	location: '台灣・新竹',
-	email: 'contact@hsieh-dev.us.ci',
+	email: 'contact@mengche.dev',
 	about: [
 		'我是 謝孟哲，你可以叫我 阿哲 或 Jay！',
 		'我是一名對開發充滿熱情的學生，有 4 年全端開發經驗，熟悉 Node.js、Svelte 與 TypeScript。',
@@ -251,7 +251,7 @@ export const projects: Project[] = [
 		type: [],
 		technologies: ['Svelte', 'Tailwind CSS', 'TypeScript', 'RWD', 'Express'],
 		githubUrl: 'https://github.com/jaydev0220/ping-board',
-		liveUrl: 'https://ping-board.hsieh-dev.us.ci'
+		liveUrl: 'https://ping-board.mengche.dev'
 	},
 	{
 		id: '10',
@@ -270,31 +270,31 @@ export const certificates: Certificate[] = [
 		name: 'TOEIC Gold (885)',
 		issuer: 'ETS',
 		date: '2023',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/toeic-2023.webp'
+		credentialUrl: 'https://cdn.mengche.dev/certificates/toeic-2023.webp'
 	},
 	{
 		name: '工業電子丙級',
 		issuer: '中華民國勞動部',
 		date: '2023',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/industrial-electronics-c.webp'
+		credentialUrl: 'https://cdn.mengche.dev/certificates/industrial-electronics-c.webp'
 	},
 	{
 		name: '工業配線丙級',
 		issuer: '中華民國勞動部',
 		date: '2022',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/industrial-wiring-c.webp'
+		credentialUrl: 'https://cdn.mengche.dev/certificates/industrial-wiring-c.webp'
 	},
 	{
 		name: 'GEPT 中級',
 		issuer: 'LTTC',
 		date: '2019',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/gept-intermediate.webp'
+		credentialUrl: 'https://cdn.mengche.dev/certificates/gept-intermediate.webp'
 	},
 	{
 		name: 'GEPT 初級',
 		issuer: 'LTTC',
 		date: '2018',
-		credentialUrl: 'https://cdn.hsieh-dev.us.ci/certificates/gept-elementary.webp'
+		credentialUrl: 'https://cdn.mengche.dev/certificates/gept-elementary.webp'
 	}
 ];
 
