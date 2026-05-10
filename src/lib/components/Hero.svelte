@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { typingStrings } from '$lib/data';
+	import { resume, typingStrings } from '$lib/data';
 	import { handleNavClick } from '$lib/utils';
 	import { onMount } from 'svelte';
 
@@ -9,6 +9,12 @@
 	let isDeleting = $state(false);
 
 	onMount(() => {
+		const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (reducedMotion) {
+			typedText = typingStrings[0];
+			return;
+		}
+
 		const typingSpeed = 100;
 		const deletingSpeed = 50;
 		const pauseBeforeDelete = 2000;
@@ -59,19 +65,24 @@
 	<div class="z-1 w-full text-center">
 		<div class="mb-8">
 			<div class="flex min-h-20 items-center justify-center">
-				<div
+				<h1
 					class="flex items-center gap-4 font-(family-name:--font-family-mono) text-[clamp(1.25rem,4vw,1.75rem)] text-white"
 				>
-					<span class="min-h-[1.2em] text-white" data-testid="typing-text">{typedText}</span>
-					<span class="animate-[blink_1s_step-end_infinite] text-accent-primary">▋</span>
-				</div>
+					<span class="sr-only">{resume.name} - {resume.title}</span>
+					<span class="min-h-[1.2em] text-white" data-testid="typing-text" aria-hidden="true">
+						{typedText}
+					</span>
+					<span class="animate-[blink_1s_step-end_infinite] text-accent-primary" aria-hidden="true"
+						>▋</span
+					>
+				</h1>
 			</div>
 		</div>
 		<div class="flex flex-wrap justify-center gap-6">
 			<a
 				href="#about"
 				onclick={(e) => handleNavClick(e, '#about')}
-				class="inline-block border border-border px-6 py-3 font-(family-name:--font-family-mono) text-base text-text-secondary transition-all duration-(--transition-fast) hover:border-accent-primary hover:text-accent-primary"
+				class="inline-block border border-border px-6 py-3 font-(family-name:--font-family-mono) text-base text-text-secondary transition-[color,border-color,transform] duration-(--transition-fast) hover:-translate-y-0.5 hover:border-accent-primary hover:text-accent-primary"
 				data-testid="cta-about"
 			>
 				關於我
@@ -79,7 +90,7 @@
 			<a
 				href="#portfolio"
 				onclick={(e) => handleNavClick(e, '#portfolio')}
-				class="inline-block border border-border px-6 py-3 font-(family-name:--font-family-mono) text-base text-text-secondary transition-all duration-(--transition-fast) hover:border-accent-primary hover:text-accent-primary"
+				class="inline-block border border-border px-6 py-3 font-(family-name:--font-family-mono) text-base text-text-secondary transition-[color,border-color,transform] duration-(--transition-fast) hover:-translate-y-0.5 hover:border-accent-primary hover:text-accent-primary"
 				data-testid="cta-portfolio"
 			>
 				查看作品

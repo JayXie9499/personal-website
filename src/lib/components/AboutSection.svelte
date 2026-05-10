@@ -27,13 +27,13 @@
 						<div
 							class="flex items-center gap-4 p-2 text-text-secondary transition-colors duration-(--transition-fast) hover:text-accent-primary"
 						>
-							<Icon icon="lucide:mail" width="20" height="20" />
-							<span>{resume.email}</span>
+							<Icon icon="lucide:mail" width="20" height="20" aria-hidden="true" />
+							<span class="break-all">{resume.email}</span>
 						</div>
 						<div
 							class="flex items-center gap-4 p-2 text-text-secondary transition-colors duration-(--transition-fast) hover:text-accent-primary"
 						>
-							<Icon icon="lucide:map-pin" width="20" height="20" />
+							<Icon icon="lucide:map-pin" width="20" height="20" aria-hidden="true" />
 							<span>{resume.location}</span>
 						</div>
 					</div>
@@ -44,10 +44,11 @@
 								href={social.url}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center gap-2 border border-transparent bg-bg-tertiary px-3 py-4 transition-all duration-(--transition-base) hover:border-accent-primary hover:bg-bg-primary md:px-6"
+								aria-label={social.name}
+								class="flex items-center gap-2 border border-transparent bg-bg-tertiary px-3 py-4 transition-[background-color,border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:border-accent-primary hover:bg-bg-primary md:px-6"
 								data-testid={`social-${social.name.toLowerCase()}`}
 							>
-								<Icon icon={social.icon} width="24" height="24" />
+								<Icon icon={social.icon} width="24" height="24" aria-hidden="true" />
 								<span class="hidden font-medium text-text-secondary md:inline">{social.name}</span>
 							</a>
 						{/each}

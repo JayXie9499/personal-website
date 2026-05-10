@@ -14,6 +14,21 @@
 			filteredProjects = projects.filter((project) => project.type.includes(type));
 		}
 	}
+
+	function getProjectCardClasses(index: number) {
+		const spanClass =
+			index === 0
+				? 'lg:col-span-4 lg:row-span-2'
+				: index === 1
+					? 'lg:col-span-2 lg:row-span-2'
+					: index % 5 === 2
+						? 'lg:col-span-3'
+						: index % 5 === 3
+							? 'lg:col-span-3'
+							: 'lg:col-span-2';
+
+		return `flex min-w-0 flex-col gap-6 border border-border bg-bg-tertiary p-8 transition-[border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:border-accent-primary ${spanClass}`;
+	}
 </script>
 
 <!-- Portfolio Section -->
@@ -33,11 +48,13 @@
 		<div class="mb-16 flex flex-wrap justify-center gap-4" data-testid="portfolio-filters">
 			{#each projectFilters as filter (filter.type)}
 				<button
-					class="border-2 border-transparent bg-bg-tertiary px-6 py-4 font-medium text-text-secondary transition-all duration-(--transition-base) hover:bg-bg-primary hover:text-text-primary {activeFilter ===
+					type="button"
+					class="border-2 border-transparent bg-bg-tertiary px-6 py-4 font-medium text-text-secondary transition-[color,background-color,border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:bg-bg-primary hover:text-text-primary {activeFilter ===
 					filter.type
-						? 'border-accent-primary bg-accent-primary text-white'
+						? 'border-accent-primary bg-accent-primary text-bg-primary'
 						: ''}"
 					onclick={() => filterProjects(filter.type)}
+					aria-pressed={activeFilter === filter.type}
 					data-testid={`filter-${filter.type}`}
 				>
 					{filter.label}
@@ -47,16 +64,13 @@
 
 		<!-- Projects Grid -->
 		<div
-			class="grid animate-[fadeIn_var(--transition-slow)] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+			class="grid animate-[fadeIn_var(--transition-slow)] auto-rows-fr grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6"
 			data-testid="projects-grid"
 		>
 			{#each filteredProjects as project, i (i)}
-				<div
-					class="flex flex-col gap-6 border border-border bg-bg-tertiary p-8 transition-all duration-(--transition-base) hover:border-accent-primary"
-					data-testid={`project-${i}`}
-				>
-					<h3 class="mb-2 text-2xl text-text-primary">{project.title}</h3>
-					<p class="grow leading-[1.6] text-text-secondary">{project.description}</p>
+				<div class={getProjectCardClasses(i)} data-testid={`project-${i}`}>
+					<h3 class="mb-2 text-2xl break-words text-text-primary">{project.title}</h3>
+					<p class="grow leading-[1.6] break-words text-text-secondary">{project.description}</p>
 
 					<div class="flex flex-wrap gap-2">
 						{#each project.technologies as tech (tech)}
@@ -73,11 +87,11 @@
 								href={project.githubUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center gap-2 px-4 py-2 font-medium transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
+								class="flex items-center gap-2 px-4 py-2 font-medium transition-[background-color,transform] duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
 								data-testid={`project-github-${i}`}
 								aria-label="查看 GitHub 專案"
 							>
-								<Icon icon="simple-icons:github" width="24" height="24" />
+								<Icon icon="simple-icons:github" width="24" height="24" aria-hidden="true" />
 								<span class="text-accent-primary">GitHub</span>
 							</a>
 						{/if}
@@ -86,11 +100,11 @@
 								href={project.liveUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex items-center gap-2 px-4 py-2 font-medium transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
+								class="flex items-center gap-2 px-4 py-2 font-medium transition-[background-color,transform] duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
 								data-testid={`project-live-${i}`}
 								aria-label="查看線上展示"
 							>
-								<Icon icon="lucide:external-link" width="24" height="24" />
+								<Icon icon="lucide:external-link" width="24" height="24" aria-hidden="true" />
 								<span class="text-accent-primary">Demo</span>
 							</a>
 						{/if}

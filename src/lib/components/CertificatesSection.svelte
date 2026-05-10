@@ -24,7 +24,7 @@
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each certificates as cert (cert.name)}
 				<div
-					class="flex flex-col gap-3 border border-border bg-bg-secondary p-6 transition-all duration-(--transition-base) hover:border-accent-primary"
+					class="flex flex-col gap-3 border border-border bg-bg-secondary p-6 transition-[border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:border-accent-primary"
 					data-testid={`certificate-${cert.name.toLowerCase().replace(/\s+/g, '-')}`}
 				>
 					<h3 class="text-lg font-medium text-text-primary">{cert.name}</h3>
@@ -32,6 +32,7 @@
 					<p class="text-sm text-accent-primary">{cert.date}</p>
 					{#if isValidCredentialUrl(cert.credentialUrl)}
 						<button
+							type="button"
 							onclick={() => (selectedCert = { name: cert.name, url: cert.credentialUrl! })}
 							class="mt-auto inline-flex cursor-pointer items-center gap-2 text-sm text-text-muted transition-colors duration-(--transition-fast) hover:text-accent-primary"
 						>

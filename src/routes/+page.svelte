@@ -116,10 +116,12 @@
 
 <div class="flex min-h-screen flex-col">
 	<Navigation />
-	<Hero />
-	<AboutSection />
-	<CertificatesSection />
-	<SkillsSection />
-	<PortfolioSection />
+	<main id="main-content" class="flex flex-col">
+		<Hero />
+		<AboutSection />
+		<CertificatesSection />
+		<SkillsSection />
+		<PortfolioSection />
+	</main>
 	<Footer />
 </div>

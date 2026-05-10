@@ -62,13 +62,33 @@
    Global Base Styles
    ============================================ */
 html {
+	color-scheme: dark;
 	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
 	font-family: var(--font-family-primary);
 	background-color: var(--color-bg-primary);
 	color: var(--color-text-primary);
+	overflow-x: hidden;
+}
+
+:where(a, button) {
+	touch-action: manipulation;
+}
+
+:where(a, button):focus-visible {
+	outline: 2px solid var(--color-accent-primary);
+	outline-offset: 4px;
+}
+
+:where(h1, h2, h3) {
+	text-wrap: balance;
+}
+
+:where(p) {
+	text-wrap: pretty;
 }
 
 /* ============================================
@@ -119,6 +139,10 @@ body {
    Accessibility
    ============================================ */
 @media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
 	*,
 	*::before,
 	*::after {

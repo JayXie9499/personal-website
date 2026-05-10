@@ -46,11 +46,12 @@
 		<div class="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start">
 			{#each skillCategories as category (category.category)}
 				<div
-					class="border border-border bg-bg-secondary transition-all duration-(--transition-base) hover:border-accent-primary"
+					class="border border-border bg-bg-secondary transition-[border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:border-accent-primary"
 					data-testid={`tech-category-${category.category.toLowerCase()}`}
 				>
 					<button
 						class="flex w-full items-center justify-between p-8 text-left"
+						type="button"
 						onclick={() => toggleCategory(category.category)}
 						aria-expanded={expandedCategories.has(category.category)}
 						data-testid={`tech-category-toggle-${category.category.toLowerCase()}`}
@@ -71,10 +72,10 @@
 							<div class="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-6">
 								{#each category.skills as skill (skill.name)}
 									<div
-										class="flex flex-col items-center gap-2 border border-transparent bg-bg-tertiary p-6 transition-all duration-(--transition-base) hover:border-accent-primary"
+										class="flex flex-col items-center gap-2 border border-transparent bg-bg-tertiary p-6 transition-[border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:border-accent-primary"
 										data-testid={`tech-skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}
 									>
-										<Icon icon={skill.icon} width="36" height="36" />
+										<Icon icon={skill.icon} width="36" height="36" aria-hidden="true" />
 										<span class="text-center text-sm font-medium text-text-secondary">
 											{skill.name}
 										</span>
