@@ -1,8 +1,8 @@
 {
-  "servers": {
-    "lean-ctx": {
-      "args": [],
-      "command": "lean-ctx"
-    }
-  }
+	"servers": {
+		"lean-ctx": {
+			"args": [],
+			"command": "lean-ctx"
+		}
+	}
 }
