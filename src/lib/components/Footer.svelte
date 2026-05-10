@@ -4,11 +4,5 @@
 		<p class="text-left font-(family-name:--font-family-mono) text-xs text-text-muted">
 			Copyright © {new Date().getFullYear()} Meng Che Hsieh. All rights reserved.
 		</p>
-
-		<p
-			class="text-right font-(family-name:--font-family-mono) text-xs text-text-muted underline-offset-3 hover:underline"
-		>
-			<a href="/credits">Icon Credits</a>
-		</p>
 	</div>
 </footer>
