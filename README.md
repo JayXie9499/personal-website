@@ -7,6 +7,7 @@ A static personal website and digital business card built with SvelteKit.
 - **Framework**: SvelteKit v2 / Svelte v5
 - **Styling**: Tailwind CSS v4
 - **Language**: TypeScript 5.9
+- **Typography**: System-local font stacks, no bundled webfonts
 - **Testing**: Playwright (E2E)
 - **Deployment**: GitHub Pages (adapter-static)
 

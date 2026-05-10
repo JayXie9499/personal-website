@@ -20,11 +20,17 @@
 
 	/* Typography */
 	--font-family-primary:
-		'Monaspace Neon', 'Intel One Mono', 'LXGW WenKai TC', 'Noto Sans TC', monospace;
+		system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Hiragino Sans CNS',
+		'Microsoft JhengHei', sans-serif;
 	--font-family-mono:
-		'Monaspace Neon', 'Intel One Mono', 'LXGW WenKai TC', 'Noto Sans TC', monospace;
-	--font-family-display: 'Syne', 'Space Grotesk', 'LXGW WenKai TC', 'Noto Sans TC', sans-serif;
-	--font-family-cjk: 'LXGW WenKai TC', 'Noto Sans TC', sans-serif;
+		ui-monospace, 'SFMono-Regular', 'SF Mono', 'Cascadia Mono', 'Segoe UI Mono', Menlo, Monaco,
+		Consolas, 'Liberation Mono', monospace;
+	--font-family-display:
+		system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Hiragino Sans CNS',
+		'Microsoft JhengHei', sans-serif;
+	--font-family-cjk:
+		system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang TC', 'Hiragino Sans CNS',
+		'Microsoft JhengHei', sans-serif;
 
 	/* Spacing */
 	--spacing-xs: 0.5rem;

@@ -7,25 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      '@fontsource/intel-one-mono':
-        specifier: ^5.2.2
-        version: 5.2.2
-      '@fontsource/lxgw-wenkai-tc':
-        specifier: ^5.2.8
-        version: 5.2.8
-      '@fontsource/monaspace-neon':
-        specifier: ^5.2.5
-        version: 5.2.5
-      '@fontsource/noto-sans-tc':
-        specifier: ^5.2.9
-        version: 5.2.9
-      '@fontsource/space-grotesk':
-        specifier: ^5.2.10
-        version: 5.2.10
-      '@fontsource/syne':
-        specifier: ^5.2.7
-        version: 5.2.7
     devDependencies:
       '@eslint/compat':
         specifier: ^2.0.2
@@ -305,24 +286,6 @@ packages:
   '@eslint/plugin-kit@0.4.1':
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@fontsource/intel-one-mono@5.2.2':
-    resolution: {integrity: sha512-4FecqoAab8y1d1zOoA1NRTj5hjm8KMtuKtMj+ddHtsq9/8vK3NwGdARQ9E8hSxo1lZSaN0QcnJVP89gkmA+vGA==}
-
-  '@fontsource/lxgw-wenkai-tc@5.2.8':
-    resolution: {integrity: sha512-bbzfwZx5Ifc635MViFDfH6h//SgR0ylnhKSV487roGxWU2W4ue2KtygrGYMg40TSJ3GEZ5LdEheq1ABmSSjKfQ==}
-
-  '@fontsource/monaspace-neon@5.2.5':
-    resolution: {integrity: sha512-TjSSuHC37DroyhP5YCKRCAxdUb3In/uqHzqqW/8Ul+JWilz37d8lr8jFeapnbD3QdYXgiQoU2Rf/CmTdyl06DA==}
-
-  '@fontsource/noto-sans-tc@5.2.9':
-    resolution: {integrity: sha512-Z+pXTvXYrip79lPV9X1lCYO3UTys55P25VqcifDStIzdZ86I4R6t8dz+NhGd09YdbvHWvOCB5Icw1m7glKHPNQ==}
-
-  '@fontsource/space-grotesk@5.2.10':
-    resolution: {integrity: sha512-XNXEbT74OIITPqw2H6HXwPDp85fy43uxfBwFR5PU+9sLnjuLj12KlhVM9nZVN6q6dlKjkuN8JisW/OBxwxgUew==}
-
-  '@fontsource/syne@5.2.7':
-    resolution: {integrity: sha512-OgWgLPSbieiSfdFXgMs0l/rspIFzVoDZxw8wKj15n39epRqO5+Uv36c0MXNDcw2GuK/TIBgpC9G8VAgs+bVm7A==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1707,18 +1670,6 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
       levn: 0.4.1
-
-  '@fontsource/intel-one-mono@5.2.2': {}
-
-  '@fontsource/lxgw-wenkai-tc@5.2.8': {}
-
-  '@fontsource/monaspace-neon@5.2.5': {}
-
-  '@fontsource/noto-sans-tc@5.2.9': {}
-
-  '@fontsource/space-grotesk@5.2.10': {}
-
-  '@fontsource/syne@5.2.7': {}
 
   '@humanfs/core@0.19.1': {}
 
