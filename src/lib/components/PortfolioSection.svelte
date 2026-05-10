@@ -15,20 +15,8 @@
 		}
 	}
 
-	function getProjectCardClasses(index: number) {
-		const spanClass =
-			index === 0
-				? 'lg:col-span-4 lg:row-span-2'
-				: index === 1
-					? 'lg:col-span-2 lg:row-span-2'
-					: index % 5 === 2
-						? 'lg:col-span-3'
-						: index % 5 === 3
-							? 'lg:col-span-3'
-							: 'lg:col-span-2';
-
-		return `flex min-w-0 flex-col gap-6 border border-border bg-bg-tertiary p-8 transition-[border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:border-accent-primary ${spanClass}`;
-	}
+	const projectCardClasses =
+		'flex min-w-0 flex-col gap-6 border border-border bg-bg-tertiary p-8 transition-[border-color,transform] duration-(--transition-base) hover:-translate-y-0.5 hover:border-accent-primary';
 </script>
 
 <!-- Portfolio Section -->
@@ -64,13 +52,15 @@
 
 		<!-- Projects Grid -->
 		<div
-			class="grid animate-[fadeIn_var(--transition-slow)] auto-rows-fr grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6"
+			class="grid animate-[fadeIn_var(--transition-slow)] auto-rows-fr grid-cols-1 justify-center gap-8 md:grid-cols-[repeat(2,minmax(0,22rem))] lg:grid-cols-[repeat(3,minmax(0,22rem))]"
 			data-testid="projects-grid"
 		>
 			{#each filteredProjects as project, i (i)}
-				<div class={getProjectCardClasses(i)} data-testid={`project-${i}`}>
+				<div class={projectCardClasses} data-testid={`project-${i}`}>
 					<h3 class="mb-2 text-2xl wrap-break-word text-text-primary">{project.title}</h3>
-					<p class="grow leading-[1.6] wrap-break-word text-text-secondary">{project.description}</p>
+					<p class="grow leading-[1.6] wrap-break-word text-text-secondary">
+						{project.description}
+					</p>
 
 					<div class="flex flex-wrap gap-2">
 						{#each project.technologies as tech (tech)}
