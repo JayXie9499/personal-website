@@ -1,6 +1,6 @@
 # personal-website
 
-A static personal website and digital business card built with SvelteKit.
+A static personal website built with SvelteKit.
 
 ## Tech Stack
 

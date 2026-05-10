@@ -1,6 +1,6 @@
 {
 	"name": "personal-website",
-	"description": "",
+	"description": "A static personal website built with SvelteKit.",
 	"license": "CC-BY-NC-ND-4.0",
 	"private": true,
 	"version": "0.0.1",
