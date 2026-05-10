@@ -50,10 +50,10 @@
 			class="grid animate-[fadeIn_var(--transition-slow)] grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
 			data-testid="projects-grid"
 		>
-			{#each filteredProjects as project (project.id)}
+			{#each filteredProjects as project, i (i)}
 				<div
 					class="flex flex-col gap-6 border border-border bg-bg-tertiary p-8 transition-all duration-(--transition-base) hover:border-accent-primary"
-					data-testid={`project-${project.id}`}
+					data-testid={`project-${i}`}
 				>
 					<h3 class="mb-2 text-2xl text-text-primary">{project.title}</h3>
 					<p class="grow leading-[1.6] text-text-secondary">{project.description}</p>
@@ -74,7 +74,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 								class="flex items-center gap-2 px-4 py-2 font-medium transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
-								data-testid={`project-github-${project.id}`}
+								data-testid={`project-github-${i}`}
 								aria-label="查看 GitHub 專案"
 							>
 								<Icon icon="simple-icons:github" width="24" height="24" />
@@ -87,7 +87,7 @@
 								target="_blank"
 								rel="noopener noreferrer"
 								class="flex items-center gap-2 px-4 py-2 font-medium transition-all duration-(--transition-fast) hover:translate-x-1 hover:bg-[rgba(132,204,22,0.1)]"
-								data-testid={`project-live-${project.id}`}
+								data-testid={`project-live-${i}`}
 								aria-label="查看線上展示"
 							>
 								<Icon icon="lucide:external-link" width="24" height="24" />

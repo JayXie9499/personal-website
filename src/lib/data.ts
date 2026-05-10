@@ -37,7 +37,6 @@ export interface Certificate {
 export type ProjectType = 'all';
 
 export interface Project {
-	id: string;
 	title: string;
 	description: string;
 	type: ProjectType[];
@@ -164,7 +163,6 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
 	{
-		id: '1',
 		title: 'Daily Quote Generator',
 		description:
 			'A lightweight quote app that serves random daily inspiration, stores in local storage, and delivers a responsive, polished reading experience with clean vanilla HTML, CSS, and JavaScript.',
@@ -174,7 +172,6 @@ export const projects: Project[] = [
 		liveUrl: '/daily-quote-generator'
 	},
 	{
-		id: '2',
 		title: 'Password Strength Checker',
 		description:
 			'A Python password analyzer that scores strength by length, entropy signals, and common-pattern detection, then returns actionable guidance to improve security.',
@@ -184,7 +181,6 @@ export const projects: Project[] = [
 		liveUrl: '/password-strength-checker'
 	},
 	{
-		id: '3',
 		title: 'Pomodoro Timer',
 		description:
 			'A Vue 3 productivity timer with configurable work and break cycles, transition alerts, and volume control, designed for focused deep-work sessions across devices.',
@@ -194,7 +190,6 @@ export const projects: Project[] = [
 		liveUrl: '/pomodoro-timer'
 	},
 	{
-		id: '4',
 		title: 'CSS 3D',
 		description:
 			'A compact CSS 3D demo showcasing animated cubes, layered transforms, and axis-based spin effects, built to demonstrate spatial motion and modern CSS rendering.',
@@ -204,7 +199,6 @@ export const projects: Project[] = [
 		liveUrl: '/css-3d'
 	},
 	{
-		id: '5',
 		title: 'Simple TODO List',
 		description:
 			'A React and TypeScript task manager with local persistence, theme switching, and component-based state handling, built for clear UX and maintainable front-end architecture.',
@@ -214,7 +208,6 @@ export const projects: Project[] = [
 		liveUrl: '/simple-todo-list'
 	},
 	{
-		id: '6',
 		title: 'Color Palette',
 		description:
 			'A fast Svelte tool for generating, previewing, and refining color systems in real time, helping developers and designers build consistent UI themes with export-ready output.',
@@ -224,7 +217,6 @@ export const projects: Project[] = [
 		liveUrl: '/color-palette'
 	},
 	{
-		id: '7',
 		title: "SuiSui's Personal Website",
 		description:
 			'A high-performance Svelte website for VTuber 水水, optimized for static deployment, responsive presentation, and a modern branded fan experience.',
@@ -234,7 +226,6 @@ export const projects: Project[] = [
 		liveUrl: 'https://suisui0528.github.io'
 	},
 	{
-		id: '8',
 		title: 'Unlockture 2025 Memorial',
 		description:
 			'An immersive Vue 3 fullscreen storytelling experience with custom scroll behavior, smooth section transitions, and multi-section navigation for high-impact event presentation.',
@@ -244,7 +235,6 @@ export const projects: Project[] = [
 		liveUrl: '/unlockture-2025-memorial'
 	},
 	{
-		id: '9',
 		title: 'Ping Board',
 		description:
 			'A distributed uptime monitoring platform with status pages, latency tracking, and 90-day historical charts, built for reliable service observability and responsive dashboard visibility.',
@@ -254,7 +244,6 @@ export const projects: Project[] = [
 		liveUrl: 'https://ping-board.mengche.dev'
 	},
 	{
-		id: '10',
 		title: "Butter's Personal Website",
 		description:
 			'A performant Svelte website for Butter 巴特, combining theme tokens, Runes-based state management, and responsive design for a refined personal brand presence.',
