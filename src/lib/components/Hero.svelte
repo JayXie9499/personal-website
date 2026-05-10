@@ -66,7 +66,7 @@
 		<div class="mb-8">
 			<div class="flex min-h-20 items-center justify-center">
 				<h1
-					class="flex items-center gap-4 font-(family-name:--font-family-mono) text-[clamp(1.25rem,4vw,1.75rem)] text-white"
+					class="flex items-center gap-4 font-family-mono text-[clamp(1.25rem,4vw,1.75rem)] text-white"
 				>
 					<span class="sr-only">{resume.name} - {resume.title}</span>
 					<span class="min-h-[1.2em] text-white" data-testid="typing-text" aria-hidden="true">
@@ -82,7 +82,7 @@
 			<a
 				href="#about"
 				onclick={(e) => handleNavClick(e, '#about')}
-				class="inline-block border border-border px-6 py-3 font-(family-name:--font-family-mono) text-base text-text-secondary transition-[color,border-color,transform] duration-(--transition-fast) hover:-translate-y-0.5 hover:border-accent-primary hover:text-accent-primary"
+				class="inline-block border border-border px-6 py-3 font-family-mono text-base text-text-secondary transition-[color,border-color,transform] duration-(--transition-fast) hover:-translate-y-0.5 hover:border-accent-primary hover:text-accent-primary"
 				data-testid="cta-about"
 			>
 				關於我
@@ -90,7 +90,7 @@
 			<a
 				href="#portfolio"
 				onclick={(e) => handleNavClick(e, '#portfolio')}
-				class="inline-block border border-border px-6 py-3 font-(family-name:--font-family-mono) text-base text-text-secondary transition-[color,border-color,transform] duration-(--transition-fast) hover:-translate-y-0.5 hover:border-accent-primary hover:text-accent-primary"
+				class="inline-block border border-border px-6 py-3 font-family-mono text-base text-text-secondary transition-[color,border-color,transform] duration-(--transition-fast) hover:-translate-y-0.5 hover:border-accent-primary hover:text-accent-primary"
 				data-testid="cta-portfolio"
 			>
 				查看作品

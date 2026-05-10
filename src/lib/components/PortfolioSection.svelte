@@ -69,8 +69,8 @@
 		>
 			{#each filteredProjects as project, i (i)}
 				<div class={getProjectCardClasses(i)} data-testid={`project-${i}`}>
-					<h3 class="mb-2 text-2xl break-words text-text-primary">{project.title}</h3>
-					<p class="grow leading-[1.6] break-words text-text-secondary">{project.description}</p>
+					<h3 class="mb-2 text-2xl wrap-break-word text-text-primary">{project.title}</h3>
+					<p class="grow leading-[1.6] wrap-break-word text-text-secondary">{project.description}</p>
 
 					<div class="flex flex-wrap gap-2">
 						{#each project.technologies as tech (tech)}
